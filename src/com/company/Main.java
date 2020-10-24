@@ -5,11 +5,12 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Circle Testcircle = new Circle();
-        Testcircle.circle_x=3;
-        Testcircle.circle_y=3;
-        int Point_x=5;
-        int Point_y=7;
+        Circle testCircle = new Circle();
+        testCircle.circleX =3;
+        testCircle.circleY =3;
+
+        int pointX=5;
+        int pointY=7;
 
         Scanner myObj = new Scanner(System.in);
         System.out.println("Write a Raduis of Circle:");
@@ -17,8 +18,15 @@ public class Main {
         float radius = myObj.nextFloat();
         System.out.println("Raduis of Circle = " + radius);
 
-        Testcircle.calculateCircumference(radius);
-        Testcircle.calculateArea(radius);
-        Testcircle.isInside(Point_x,Point_y,radius,Testcircle.circle_x, Testcircle.circle_y);
+        testCircle.radius=radius;
+        testCircle.calculateCircumference();
+        testCircle.calculateArea();
+        boolean isInside = testCircle.isInside(pointX,pointY);
+        if (isInside){
+            System.out.println("point is inside");
+        }
+        else {
+            System.out.println("point is not inside");
+        }
     }
 }
