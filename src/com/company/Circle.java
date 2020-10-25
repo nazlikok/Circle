@@ -1,3 +1,5 @@
+
+
 package com.company;
 
 public class Circle {
@@ -14,8 +16,8 @@ public class Circle {
         float circum = (float) (2*Math.PI*radius);
         return circum;
     }
-    boolean isInside(int point_x, int point_y) {
-        return (point_x - circleX) * (point_x - circleX) + (point_y - circleY) * (point_y - circleY) <= radius * radius;
+    boolean isInside(int pointX, int pointY) {
+        return (pointX - circleX) * (pointX - circleX) + (pointY - circleY) * (pointY - circleY) <= radius * radius;
 
     }
 }
