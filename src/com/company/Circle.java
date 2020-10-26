@@ -3,8 +3,7 @@
 package com.company;
 
 public class Circle {
-    int circleX;
-    int circleY;
+    Point center;
     float radius;
 
     float calculateArea(){
@@ -16,8 +15,8 @@ public class Circle {
         float circum = (float) (2*Math.PI*radius);
         return circum;
     }
-    boolean isInside(int pointX, int pointY) {
-        return (pointX - circleX) * (pointX - circleX) + (pointY - circleY) * (pointY - circleY) <= radius * radius;
+    boolean isInside(Point point) {
+        return (point.pointX - center.pointX) * (point.pointX - center.pointX) + (point.pointY - center.pointY) * (point.pointY - center.pointY) <= radius * radius;
 
     }
 }
