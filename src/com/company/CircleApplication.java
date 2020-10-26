@@ -8,6 +8,7 @@ public class CircleApplication {
         Point pointClass = new Point();
         pointClass.pointX=2;
         pointClass.pointY=2;
+        System.out.println("PointX="+ pointClass.pointX +" PointY="+ pointClass.pointY + "\n");
 
         Random rand = new Random();
         for(int i=0; i<6; i++){
@@ -21,11 +22,13 @@ public class CircleApplication {
             testCircle.radius=randRadius;
 
             float area = testCircle.calculateArea();
+            float circumference = testCircle.calculateCircumference();
 
 
-            System.out.println("PointX="+ pointClass.pointX +" PointY="+ pointClass.pointY);
+
             System.out.println("cirlceX=" + testCircle.circleX + " cirlceY=" + testCircle.circleY + " radius=" + testCircle.radius);
             System.out.println(i+"."+"circle area = " + area);
+            System.out.println(i+"."+"circle circumference = " + circumference);
 
             boolean isInside = testCircle.isInside(pointClass.pointX,pointClass.pointY);
             if (isInside){
@@ -34,6 +37,7 @@ public class CircleApplication {
             else {
                 System.out.println("point is not inside");
             }
+            System.out.println();
         }
 
     }
